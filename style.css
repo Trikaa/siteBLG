@@ -1,16 +1,45 @@
+/* ======================== */
+/* Base Styles              */
+/* ======================== */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background: #111;
   color: white;
-  scroll-behavior: smooth; /* плавный скролл */
+  scroll-behavior: smooth;
 }
 
+section {
+  padding: 60px 20px;
+  text-align: center;
+  scroll-margin-top: 100px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background: #e60000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+/* ======================== */
+/* Header / Navbar          */
+/* ======================== */
 header.navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   background: #111;
   padding: 10px 20px;
   position: sticky;
@@ -18,10 +47,14 @@ header.navbar {
   z-index: 1000;
 }
 
+.navbar-logo {
+  flex: 1;
+  max-width: 300px;
+}
+
 .navbar-logo img {
-  height: 120px;
-  width: auto;
-  object-fit: contain;
+  width: 100%;
+  height: 100px;
 }
 
 .navbar-links {
@@ -53,12 +86,32 @@ header.navbar {
   color: #e60000;
 }
 
-/* Скрыть чекбокс */
+/* ======================== */
+/* Language Buttons (Desktop) */
+/* ======================== */
+.language-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.language-buttons button {
+  background-color: #e60000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ======================== */
+/* Mobile Burger Menu       */
+/* ======================== */
 #menu-toggle {
   display: none;
 }
 
-/* Скрыть бургер-меню на десктопе */
 .menu-icon {
   display: none;
   font-size: 28px;
@@ -66,31 +119,60 @@ header.navbar {
   cursor: pointer;
 }
 
-/* Мобильное меню (по умолчанию скрыто) */
+/* Мобильное меню */
 .mobile-menu {
   display: none;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px 10px;
   background: #111;
-  padding: 20px;
 }
 
-.mobile-menu a {
+/* Меню */
+.mobile-menu .menu-links {
+  display: grid;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.mobile-menu .menu-links a {
   color: white;
-  padding: 10px 0;
   text-decoration: none;
   font-size: 20px;
 }
 
-.mobile-menu a:hover {
+.mobile-menu .menu-links a:hover {
   color: #e60000;
 }
 
-/* Секции */
-section {
-  padding: 60px 20px;
-  text-align: center;
+/* Языковой блок */
+.mobile-menu .lang-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
 }
 
+.mobile-menu .lang-block button {
+  background-color: #e60000;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.mobile-menu .lang-block button:hover {
+  background-color: #ff1a1a;
+}
+
+/* ======================== */
+/* Content Sections         */
+/* ======================== */
 .services, .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -124,28 +206,13 @@ footer {
   padding: 30px 20px;
 }
 
-button {
-  margin: 10px;
-  padding: 10px 20px;
-  background: #e60000;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-iframe {
-  width: 100%;
-  height: 300px;
-  border: none;
-}
-
 /* ======================== */
-/* Медиа-запросы для мобильных */
+/* Responsive               */
 /* ======================== */
 @media screen and (max-width: 768px) {
   .navbar-links,
-  .navbar-socials {
+  .navbar-socials,
+  .language-buttons {
     display: none;
   }
 
@@ -156,4 +223,69 @@ iframe {
   #menu-toggle:checked ~ .mobile-menu {
     display: flex;
   }
+}
+
+/* ======================== */
+/* Swiper Custom Arrows/Dots*/
+/* ======================== */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #e60000;
+}
+
+.swiper-pagination-bullet {
+  background: white;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #e60000;
+  opacity: 1;
+}
+
+/* ======================== */
+/* Cookie Consent Banner    */
+/* ======================== */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #222;
+  color: white;
+  padding: 20px 15px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999;
+  font-size: 14px;
+}
+
+.cookie-banner p {
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.cookie-banner button {
+  background: #e60000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cookie-banner button:hover {
+  background: #ff1a1a;
+}
+
+.socials a i {
+  color: white;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.socials a i:hover {
+  color: #e60000;
 }

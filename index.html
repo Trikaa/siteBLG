@@ -4,15 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BoostLine Garage - Exhaust & Tuning</title>
+  <link rel="icon" type="image/png" href="images/small_logo.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner">
+  <p>
+    Korzystamy z plików cookies w celu zapewnienia najlepszych usług. Kontynuując korzystanie z witryny, zgadzasz się na naszą
+    <a href="cookies.html" style="color:#e60000;">politykę cookies</a>.
+  </p>
+  <button id="accept-cookies">Akceptuję</button>
+</div>
+
+<!-- Header -->
 <header class="navbar">
   <div class="navbar-logo">
-    <img src="images/logo_boostline.png" alt="BoostLine Garage Logo">
+    <a href="#" class="logo-link">
+      <img src="images/logo_boostline.png" alt="BoostLine Garage Logo">
+    </a>
   </div>
 
   <input type="checkbox" id="menu-toggle">
@@ -28,102 +41,106 @@
   </div>
 
   <div class="navbar-socials">
-    <a href="https://www.instagram.com/boostline_garage" target="_blank">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://www.tiktok.com/@boostline_garage" target="_blank">
-      <i class="fab fa-tiktok"></i>
-    </a>
+    <a href="https://www.instagram.com/boostline_garage" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@boostline_garage" target="_blank"><i class="fab fa-tiktok"></i></a>
   </div>
 
-  <!-- Мобильное меню -->
+  <div class="language-buttons">
+    <button onclick="changeLanguage('pl')">PL</button>
+    <button onclick="changeLanguage('ua')">UA</button>
+    <button onclick="changeLanguage('en')">EN</button>
+  </div>
+
+  <!-- Mobile Menu -->
   <div class="mobile-menu">
-    <a href="#onas">O nas</a>
-    <a href="#uslugi">Usługi</a>
-    <a href="#gallery">Galeria</a>
-    <a href="#kontakt">Kontakt</a>
+    <div class="menu-links">
+      <a href="#onas">O nas</a>
+      <a href="#uslugi">Usługi</a>
+      <a href="#gallery">Galeria</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <div class="lang-block mobile-lang-buttons">
+      <button onclick="changeLanguage('pl')">PL</button>
+      <button onclick="changeLanguage('ua')">UA</button>
+      <button onclick="changeLanguage('en')">EN</button>
+    </div>
   </div>
 </header>
 
+<!-- Main Content -->
 <main>
-<section id="onas">
-  <h2>O nas</h2>
-  <p>BoostLine Garage to pasja i profesjonalizm. Specjalizujemy się w tuningu i naprawie układów wydechowych. Gwarantujemy jakość, szybkość i perfekcyjne wykonanie!</p>
-</section>
+  <section id="onas">
+    <h2>O nas</h2>
+    <p>BoostLine Garage to pasja i profesjonalizm. Specjalizujemy się w tuningu i naprawie układów wydechowych. Gwarantujemy jakość, szybkość i perfekcyjne wykonanie!</p>
+  </section>
 
-<section id="uslugi">
-  <h2>Usługi</h2>
-  <div class="services">
-    <div>Tuning wydechów</div>
-    <div>Naprawa układów wydechowych</div>
-    <div>Projektowanie wydechów na zamówienie</div>
-    <div>Sportowe układy wydechowe</div>
-    <div>Wydechy do aut osobowych i ciężarowych</div>
-  </div>
-</section>
-
-<section id="gallery">
-  <h2>Galeria</h2>
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="gallery/photo1.png" alt="Projekt 1"></div>
-      <div class="swiper-slide"><img src="gallery/photo2.png" alt="Projekt 2"></div>
-      <div class="swiper-slide"><img src="gallery/photo3.png" alt="Projekt 3"></div>
-      <div class="swiper-slide"><img src="gallery/photo4.png" alt="Projekt 4"></div>
-      <div class="swiper-slide"><img src="gallery/photo5.png" alt="Projekt 5"></div>
-      <div class="swiper-slide"><img src="gallery/photo6.png" alt="Projekt 6"></div>
-      <div class="swiper-slide"><img src="gallery/photo7.png" alt="Projekt 7"></div>
-      <div class="swiper-slide"><img src="gallery/photo8.png" alt="Projekt 8"></div>
-      <div class="swiper-slide"><img src="gallery/photo9.png" alt="Projekt 9"></div>
-      <div class="swiper-slide"><img src="gallery/photo10.png" alt="Projekt 10"></div>
-      <div class="swiper-slide"><img src="gallery/photo11.png" alt="Projekt 11"></div>
-      <div class="swiper-slide"><img src="gallery/photo12.png" alt="Projekt 12"></div>
-      <div class="swiper-slide"><img src="gallery/photo13.png" alt="Projekt 13"></div>
+  <section id="uslugi">
+    <h2>Usługi</h2>
+    <div class="services">
+      <div>Tuning wydechów</div>
+      <div>Naprawa układów wydechowych</div>
+      <div>Projektowanie wydechów na zamówienie</div>
+      <div>Sportowe układy wydechowe</div>
+      <div>Wydechy do aut osobowych i ciężarowych</div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
+  </section>
 
-<section id="kontakt">
-  <h2>Kontakt</h2>
-  <p>Adres: ul. Rafii 26, 04-241 Warszawa</p>
-  <p>Telefon: on maintenance </p>
-  <p>Godziny otwarcia:<br>
-     Pon-Pt: 8:00 – 19:00<br>
-     Sobota: 10:00 – 15:00<br>
-     Niedziela: 10:00 – 14:00 po wcześniejszym umówieniu się
-  </p>
-  <p>Email: <a href="mailto:info@boostline.pl" style="color: #e60000;">info@boostline.pl</a></p>
-  <button onclick="location.href='mailto:info@boostline.pl'">Wyślij wiadomość</button>
-  <button onclick="location.href='https://www.instagram.com/boostline_garage?igsh=cG1ucnFuNjRvZzEy'">Instagram</button>
+  <section id="gallery">
+    <h2>Galeria</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <!-- Karty dodane przez JS -->
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
 
-  <div class="socials" style="margin-top: 20px;">
-    <a href="https://www.facebook.com/boostline_garage" target="_blank">
-      <i class="fab fa-facebook fa-2x" style="color: white; margin: 0 10px;"></i>
-    </a>
-    <a href="https://www.instagram.com/boostline_garage?igsh=cG1ucnFuNjRvZzEy" target="_blank">
-      <i class="fab fa-instagram fa-2x" style="color: white; margin: 0 10px;"></i>
-    </a>
-    <a href="https://www.tiktok.com/@boostline_garage" target="_blank">
-      <i class="fab fa-tiktok fa-2x" style="color: white; margin: 0 10px;"></i>
-    </a>
-    <a href="https://www.youtube.com/@boostline_garage" target="_blank">
-      <i class="fab fa-youtube fa-2x" style="color: white; margin: 0 10px;"></i>
-    </a>
-  </div>
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Adres: ul. Rafii 26, 04-241 Warszawa</p>
+    <p>Telefon: on maintenance </p>
+    <p>Godziny otwarcia:<br>
+       Pon-Pt: 8:00 – 19:00<br>
+       Sobota: 10:00 – 15:00<br>
+       Niedziela: 10:00 – 14:00 po wcześniejszym umówieniu się
+    </p>
+    <p>Email: <a href="mailto:info@boostline.pl" style="color: #e60000;">info@boostline.pl</a></p>
+    <button onclick="location.href='mailto:info@boostline.pl'">Wyślij wiadomość</button>
+    <a href="https://www.instagram.com/boostline_garage" target="_blank">
+  <button>Instagram</button>
+</a>
 
-  <h3>Znajdziesz nas tutaj:</h3>
-  <iframe src="https://www.google.com/maps?q=Rafii+26,+04-241+Warszawa&output=embed"></iframe>
-</section>
+    <div class="socials" style="margin-top: 20px;">
+      <a href="https://www.facebook.com/people/Boostline-garage/61574886073370/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="https://www.instagram.com/boostline_garage" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="https://www.tiktok.com/@boostline_garage" target="_blank"><i class="fab fa-tiktok fa-2x"></i></a>
+      <a href="https://www.youtube.com/@boostline_garage" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+      <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
+      <a href="https://t.me/" target="_blank"><i class="fab fa-telegram fa-2x"></i></a>
+      <a href="https://m.me/610661548799106" target="_blank"><i class="fab fa-facebook-messenger fa-2x"></i></a>
+    </div>
+
+    <h3>Znajdziesz nas tutaj:</h3>
+    <iframe src="https://www.google.com/maps?q=Rafii+26,+04-241+Warszawa&output=embed"></iframe>
+  </section>
 </main>
 
+<!-- Footer -->
 <footer>
   <p>&copy; 2025 BoostLine Garage - Wszystkie prawa zastrzeżone.</p>
+  <p>
+    <a href="privacy.html" style="color:#e60000">Polityka prywatności</a> |
+    <a href="cookies.html" style="color:#e60000">Polityka cookies</a>
+  </p>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Scripts -->
+
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
 </body>
 </html>

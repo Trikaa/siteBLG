@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoostLine Garage - Вихлопні системи та тюнінг</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar-logo">
+    <a href="ua.html" class="logo-link">
+      <img src="images/logo_boostline.png" alt="BoostLine Garage Logo">
+    </a>
+  </div>
+  
+  <div class="navbar-links">
+   <a href="#onas">Про нас</a>
+   <a href="#uslugi">Послуги</a>
+   <a href="#gallery">Галерея</a>
+   <a href="#kontakt">Контакт</a>
+  </div>
+
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">
+    <i class="fas fa-bars"></i>
+  </label>
+
+  <div class="mobile-menu">
+    <div class="menu-links">
+      <a href="#onas">Про нас</a>
+      <a href="#uslugi">Послуги</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#kontakt">Контакт</a>
+    </div>
+    <div class="lang-block">
+      <button onclick="changeLanguage('pl')">PL</button>
+      <button onclick="changeLanguage('ua')">UA</button>
+      <button onclick="changeLanguage('en')">EN</button>
+    </div>
+  </div>
+
+  <div class="navbar-socials">
+    <a href="https://www.instagram.com/boostline_garage" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.tiktok.com/@boostline_garage" target="_blank">
+      <i class="fab fa-tiktok"></i>
+    </a>
+  </div>
+
+  <div class="language-buttons">
+    <button onclick="changeLanguage('pl')">PL</button>
+    <button onclick="changeLanguage('ua')">UA</button>
+    <button onclick="changeLanguage('en')">EN</button>
+  </div>
+</header>
+
+<main>
+  <section id="onas">
+    <h2>Про нас</h2>
+    <p>BoostLine Garage — це пристрасть і професіоналізм. Ми спеціалізуємося на тюнінгу та ремонті вихлопних систем. Гарантуємо якість, швидкість і бездоганне виконання!</p>
+  </section>
+
+  <section id="uslugi">
+    <h2>Послуги</h2>
+    <div class="services">
+      <div>Тюнінг вихлопів</div>
+      <div>Ремонт вихлопних систем</div>
+      <div>Індивідуальне проєктування вихлопів</div>
+      <div>Спортивні вихлопні системи</div>
+      <div>Вихлопи для легкових та вантажних авто</div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Галерея</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="gallery/photo1.png" alt="Проєкт 1"></div>
+        <div class="swiper-slide"><img src="gallery/photo2.png" alt="Проєкт 2"></div>
+        <div class="swiper-slide"><img src="gallery/photo3.png" alt="Проєкт 3"></div>
+        <div class="swiper-slide"><img src="gallery/photo4.png" alt="Проєкт 4"></div>
+        <div class="swiper-slide"><img src="gallery/photo5.png" alt="Проєкт 5"></div>
+        <div class="swiper-slide"><img src="gallery/photo6.png" alt="Проєкт 6"></div>
+        <div class="swiper-slide"><img src="gallery/photo7.png" alt="Проєкт 7"></div>
+        <div class="swiper-slide"><img src="gallery/photo8.png" alt="Проєкт 8"></div>
+        <div class="swiper-slide"><img src="gallery/photo9.png" alt="Проєкт 9"></div>
+        <div class="swiper-slide"><img src="gallery/photo10.png" alt="Проєкт 10"></div>
+        <div class="swiper-slide"><img src="gallery/photo11.png" alt="Проєкт 11"></div>
+        <div class="swiper-slide"><img src="gallery/photo12.png" alt="Проєкт 12"></div>
+        <div class="swiper-slide"><img src="gallery/photo13.png" alt="Проєкт 13"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <h2>Контакт</h2>
+    <p>Адреса: вул. Rafii 26, 04-241 Варшава</p>
+    <p>Телефон: на обслуговуванні</p>
+    <p>Години роботи:<br>
+       Пн-Пт: 8:00 – 19:00<br>
+       Субота: 10:00 – 15:00<br>
+       Неділя: 10:00 – 14:00 за попереднім записом
+    </p>
+    <p>Email: <a href="mailto:info@boostline.pl" style="color: #e60000;">info@boostline.pl</a></p>
+    <button onclick="location.href='mailto:info@boostline.pl'">Надіслати повідомлення</button>
+    <button onclick="location.href='https://www.instagram.com/boostline_garage'">Instagram</button>
+
+    <div class="socials" style="margin-top: 20px;">
+      <a href="https://www.facebook.com/boostline_garage" target="_blank">
+        <i class="fab fa-facebook fa-2x" style="color: white; margin: 0 10px;"></i>
+      </a>
+      <a href="https://www.instagram.com/boostline_garage" target="_blank">
+        <i class="fab fa-instagram fa-2x" style="color: white; margin: 0 10px;"></i>
+      </a>
+      <a href="https://www.tiktok.com/@boostline_garage" target="_blank">
+        <i class="fab fa-tiktok fa-2x" style="color: white; margin: 0 10px;"></i>
+      </a>
+      <a href="https://www.youtube.com/@boostline_garage" target="_blank">
+        <i class="fab fa-youtube fa-2x" style="color: white; margin: 0 10px;"></i>
+      </a>
+    </div>
+
+    <h3>Знайдеш нас тут:</h3>
+    <iframe src="https://www.google.com/maps?q=Rafii+26,+04-241+Warszawa&output=embed"></iframe>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 BoostLine Garage — Всі права захищені.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
